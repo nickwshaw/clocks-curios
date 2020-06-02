@@ -1,0 +1,2 @@
+services:
+      Sylius\Component\Core\Repository\ProductVariantRepositoryInterface: '@sylius.repository.product_variant'

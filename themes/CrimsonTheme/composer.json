@@ -1,0 +1,14 @@
+{
+  "name": "acme/crimson-theme",
+  "authors": [
+    {
+      "name": "James Potter",
+      "email": "prongs@example.com"
+    }
+  ],
+  "extra": {
+    "sylius-theme": {
+      "title": "Crimson Theme"
+    }
+  }
+}
