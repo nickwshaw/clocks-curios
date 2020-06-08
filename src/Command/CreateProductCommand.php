@@ -11,12 +11,11 @@ use Sylius\Component\Product\Factory\ProductVariantFactoryInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Sylius\Component\Product\Factory\ProductFactory;
 
 class CreateProductCommand extends Command
 {
     /**
-     * @var ProductFactory
+     * @var ProductFactoryInterface
      */
     private $productFactory;
 
