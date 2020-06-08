@@ -2,9 +2,9 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
 	{
-	  "name": "php",
+	  "name": "sylius_php",
 	  "image": "nickwshaw/clocks-php",
-	  "hostname": "php",
+	  "hostname": "sylius_php",
 	  "essential": true,
 	  "memory": 256
 	},
