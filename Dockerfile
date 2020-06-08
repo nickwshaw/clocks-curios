@@ -43,13 +43,13 @@ RUN set -eux; \
 	; \
 	pecl install \
 		apcu-${APCU_VERSION} \
-		xdebug \
+		redis \
 	; \
 	pecl clear-cache; \
 	docker-php-ext-enable \
 		apcu \
 		opcache \
-		xdebug \
+		redis \
 	; \
 	\
 	runDeps="$( \
@@ -111,30 +111,6 @@ RUN chmod +x /usr/local/bin/docker-entrypoint
 
 ENTRYPOINT ["docker-entrypoint"]
 CMD ["php-fpm"]
-
-FROM sylius_php as sylius_php_dev
-RUN set -eux; \
-    apk add --no-cache --virtual .build-deps \
-        $PHPIZE_DEPS \
-        coreutils \
-        freetype-dev \
-        icu-dev \
-        libjpeg-turbo-dev \
-        libpng-dev \
-        libtool \
-        libwebp-dev \
-        libzip-dev \
-        mariadb-dev \
-        zlib-dev \
-    ; \
-    pecl install \
-        xdebug \
-    ; \
-    docker-php-ext-enable \
-        xdebug \
-    ; \
-    apk del .build-deps
-COPY docker/php/xdebug.ini /usr/local/etc/php/conf.d/99-xdebug.ini
 
 FROM node:${NODE_VERSION}-alpine AS sylius_nodejs
 
