@@ -2,9 +2,9 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
 	{
-	  "name": "php-fpm",
+	  "name": "php",
 	  "image": "nickwshaw/clocks-php",
-	  "hostname": "php-fpm",
+	  "hostname": "php",
 	  "essential": true,
 	  "memory": 256
 	},
@@ -21,7 +21,7 @@
 		}
 	  ],
 	  "links": [
-		"php-fpm"
+		"php"
 	  ]
 	}
   ]
