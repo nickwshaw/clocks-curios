@@ -6,14 +6,14 @@
 	  "image": "nickwshaw/clocks-php",
 	  "hostname": "php",
 	  "essential": true,
-	  "memory": 512
+	  "memory": 256
 	},
 	{
 	  "name": "nginx",
 	  "image": "nickwshaw/clocks-nginx",
 	  "hostname": "nginx",
 	  "essential": true,
-	  "memory": 512,
+	  "memory": 128,
 	  "portMappings": [
 		{
 		  "hostPort": 80,
