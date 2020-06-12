@@ -2,27 +2,33 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
 	{
-	  "name": "php",
-	  "image": "nickwshaw/clocks-php",
-	  "hostname": "php",
-	  "essential": true,
-	  "memory": 256
+		"name": "php",
+		"image": "nickwshaw/clocks-php",
+		"hostname": "php",
+		"essential": true,
+		"memory": 128,
+		"portMappings": [
+			{
+				"hostPort": 9000,
+				"containerPort": 9000
+			}
+		]
 	},
 	{
-	  "name": "nginx",
-	  "image": "nickwshaw/clocks-nginx",
-	  "hostname": "nginx",
-	  "essential": true,
-	  "memory": 128,
-	  "portMappings": [
-		{
-		  "hostPort": 80,
-		  "containerPort": 80
-		}
-	  ],
-	  "links": [
-		"php"
-	  ]
+		"name": "nginx",
+		"image": "nickwshaw/clocks-nginx",
+		"hostname": "nginx",
+		"essential": true,
+		"memory": 128,
+		"portMappings": [
+			{
+				"hostPort": 80,
+				"containerPort": 80
+			}
+		],
+		"links": [
+			"php"
+		]
 	}
   ]
 }
