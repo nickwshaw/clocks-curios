@@ -6,8 +6,8 @@ services:
 deploy:
     provider: elasticbeanstalk
     region: "us-east-2"
-    app: "Clocks and Curios"
-    env: "ClocksAndCurios-env"
+    app: "clocks-mk2"
+    env: "ClocksMk2-env"
     bucket_name: "elasticbeanstalk-us-east-2-107716788880"
     bucket_path: "clocks_curios"
     on:
