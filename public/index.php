@@ -1,5 +1,5 @@
 <?php
-die('Im here!');
+echo('done'); die();
 use App\Kernel;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
