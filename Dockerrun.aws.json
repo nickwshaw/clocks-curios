@@ -6,7 +6,7 @@
 		"image": "nickwshaw/clocks-php",
 		"hostname": "php",
 		"essential": true,
-		"memory": 128,
+		"memory": 256,
 		"portMappings": [
 			{
 				"hostPort": 9000,
