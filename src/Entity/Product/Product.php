@@ -14,6 +14,18 @@ use Sylius\Component\Product\Model\ProductTranslationInterface;
  */
 class Product extends BaseProduct
 {
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     * @var string
+     */
+    private $ebayState;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     * @var int
+     */
+    private $ebayId;
+
     protected function createTranslation(): ProductTranslationInterface
     {
         return new ProductTranslation();
